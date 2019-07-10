@@ -28,16 +28,14 @@ namespace urban_planner
             DwellTower.Construct();
             DwellTower.Purchase("Jason Collum");
 
-            var myCity = new List<Building>()
-            {
-                EmpireState, DwellTower
-            };
+            var ColinSanDiego = new City("ColinSanDiego", 2019, "Sandaddy Longlegs");
 
-            myCity.ForEach(building =>
-            {
-                Console.WriteLine("                ");
-                building.PrintInfo();
-            });
+            ColinSanDiego.AddBuildingToCity(EmpireState);
+            ColinSanDiego.AddBuildingToCity(DwellTower);
+
+
+            ColinSanDiego.PrintCityInfo();
+
         }
     }
 }
