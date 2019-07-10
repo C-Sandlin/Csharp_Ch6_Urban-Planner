@@ -32,6 +32,7 @@ namespace urban_planner
         {
             Console.WriteLine(CityName);
             Console.WriteLine("_____________");
+            Console.WriteLine("_____________");
             Console.WriteLine($"The mayor of {CityName} is {_mayor}");
             Console.WriteLine($"It was established in {YearEstablished}");
             Console.WriteLine("_____________");
