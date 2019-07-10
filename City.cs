@@ -11,7 +11,7 @@ namespace urban_planner
         // Public Props
         public string CityName { get; set; }
         public int YearEstablished { get; set; }
-        public List<Building> BuildingList = new List<Building>();
+        public List<Building> BuildingList { get; set; }
 
 
         // Constructors
@@ -20,6 +20,7 @@ namespace urban_planner
             CityName = cityname;
             YearEstablished = yearEst;
             _mayor = mayorname;
+            BuildingList = new List<Building>();
         }
 
         // Methods
@@ -38,7 +39,11 @@ namespace urban_planner
             Console.WriteLine("_____________");
             Console.WriteLine("_____________");
             Console.WriteLine("The buildings in this city include:");
-            BuildingList.ForEach(building => building.PrintInfo());
+            // BuildingList.ForEach(building => building.PrintInfo());
+            foreach (Building building in BuildingList)
+            {
+                building.PrintInfo();
+            }
         }
 
 
